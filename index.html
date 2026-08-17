@@ -1245,7 +1245,7 @@ const burger = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const menuClose = document.getElementById('menuClose');
 burger.addEventListener('click', ()=> { const isOpen = mobileMenu.classList.toggle('open'); burger.setAttribute('aria-expanded', String(isOpen)); });
-menuClose.addEventListener('click', ()=> mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); });
+menuClose.addEventListener('click', ()=> { mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); });
 mobileMenu.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.remove('open')));
 
 /* ---------- scroll reveal ---------- */
